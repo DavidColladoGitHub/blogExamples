@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Heavy process test</title>
+	</head>
+	<body>
+		<script>
+			//Let's create a fake sleep function. Just a while loop that stops after x milliseconds
+			function sleep(milliseconds) {
+			  var start = new Date().getTime();
+			  while ((new Date().getTime() - start) < milliseconds) {
+				
+			  }
+			}
+			
+			function startProcess () {
+				var startProcess = new Date().getTime();
+				
+				//We simulate a heavy process
+				sleep(1000);
+				
+				var processTotalTime = new Date().getTime() - startProcess ;
+				document.getElementById("info").innerHTML = "Browser frozen for: " + processTotalTime + " ms";
+			}
+		</script>
+		
+		<button onclick="startProcess()"> Start process </button>
+		<span id="info">If you click this button the browser will freeze until a heavy process ends.</span>
+	</body>
+</html>
