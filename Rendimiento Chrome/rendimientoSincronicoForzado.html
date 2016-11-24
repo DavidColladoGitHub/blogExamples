@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>Diseño sincrónico forzado</title>
+		<style>
+			.caja {
+				height: 100px;
+				width: 10%;
+				background: blue;
+				float:left;
+				display:block;
+				border: 1px solid black;
+				box-sizing: border-box;
+			}
+
+			.fila {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+			<h1>Este diseño no es el más correcto. Estamos obligando a Chrome a cambiar el orden del pintado</h1>
+			<div class="caja" id="primeraCaja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+			<div class="caja"></div>
+
+			<script>
+			console.time("proceso");
+
+			/*Un elemento cualquiera*/
+			var caja = document.getElementById("primeraCaja")
+
+			/*Le añadimos una clase que le da más tamaño*/
+			var incrementoDeTamanio = 50;
+			caja.style.width = caja.offsetWidth + incrementoDeTamanio;
+
+			/*Mostramos en consola el nuevo tamaño*/
+			console.log(caja.offsetWidth)
+
+			console.timeEnd("proceso");
+			</script>
+	</body>
+</hml>
